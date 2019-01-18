@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/yellow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SupportFragment">
+    <View
+        android:background="@color/transparent_a"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:padding="30dp"
+        android:src="@drawable/ylo_logo"
+        android:layout_width="match_parent"
+        android:layout_height="130dp" />
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/address"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <EditText
+            android:inputType="text"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:paddingLeft="20dp"
+            android:textSize="16dp"
+            android:background="@drawable/left_corner_etbackground"
+            android:textColorHint="@color/transparent_a"
+            android:hint="123 palasiya indore"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/mail_address"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <EditText
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:paddingLeft="20dp"
+            android:textSize="16dp"
+            android:background="@drawable/left_corner_etbackground"
+            android:textColorHint="@color/transparent_a"
+            android:hint="thakurP123@gmail.com"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/contact"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <EditText
+            android:inputType="number"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:paddingLeft="20dp"
+            android:textSize="16dp"
+            android:background="@drawable/left_corner_etbackground"
+            android:textColorHint="@color/transparent_a"
+            android:hint="+916546354435"
+            android:textColor="@color/transparent_a"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+    </LinearLayout>
+</LinearLayout></View>
+</FrameLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+    <group>
+        <item
+            android:icon="@drawable/trip_travel"
+            android:id="@+id/book_a_trip"
+            android:title="Book a Trip" />
+        <item
+            android:icon="@drawable/my_trip"
+            android:id="@+id/my_trip"
+            android:title="My Trip" />
+        <item
+            android:icon="@drawable/ylo_cash"
+            android:id="@+id/ylo_cash"
+            android:title="YLO Cash" />
+        <item
+            android:icon="@drawable/ylo_rates"
+            android:id="@+id/ylo_rates"
+            android:title="YLO Rates" />
+        <item
+            android:icon="@drawable/refer_and_earn"
+            android:id="@+id/refer_and_earn"
+            android:title="Refer and Earn" />
+        <item
+            android:icon="@drawable/coupon"
+            android:id="@+id/coupon"
+            android:title="Coupon" />
+        <item
+            android:icon="@drawable/about_us"
+            android:id="@+id/about_us"
+            android:title="About Us" />
+        <item
+            android:icon="@drawable/support"
+            android:id="@+id/support"
+            android:title="Support" />
+        <item
+            android:icon="@drawable/setting"
+            android:id="@+id/setting"
+            android:title="Setting" />
+
+    </group>
+
+</menu>

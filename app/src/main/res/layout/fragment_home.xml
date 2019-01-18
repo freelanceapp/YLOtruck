@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Favourites"
+            android:textAlignment="center"
+            android:textColor="@color/yellow"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Thanks for your Regular Use"
+            android:textAlignment="center"
+            android:textSize="18dp"
+       />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Loading Point"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+        <android.support.design.widget.TextInputLayout
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:id="@+id/fv_loding_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:inputType="text"
+                android:textSize="16dp"
+                android:drawableLeft="@drawable/pin_et"
+                android:padding="5dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/fv_lodingpoint_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add your Loading Point"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Unloading Point"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+        <android.support.design.widget.TextInputLayout
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:id="@+id/fv_unloding_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:inputType="text"
+                android:textSize="16dp"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/small_placeholder_et"
+                android:padding="5dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/fv_unloading_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add your Unloading Point"/>
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
