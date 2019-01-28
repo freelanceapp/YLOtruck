@@ -1,4 +1,4 @@
-package technology.infobite.com.yloproject.adapter;
+package technology.infobite.com.yloproject.modal;
 
 import android.content.Intent;
 
@@ -7,6 +7,7 @@ public class FivVariableModel {
     private int image;
     private String truckname;
     private String truckid;
+    private String charge;
     private String truckdate;
     private String trucktime;
 
@@ -30,6 +31,14 @@ public class FivVariableModel {
         return truckid;
     }
 
+    public String getCharge() {
+        return charge;
+    }
+
+    public void setCharge(String charge) {
+        this.charge = charge;
+    }
+
     public void setTruckid(String truckid) {
         this.truckid = truckid;
     }
@@ -50,10 +59,11 @@ public class FivVariableModel {
         this.trucktime = trucktime;
     }
 
-    public FivVariableModel(int image, String truckname, String truckid, String truckdate, String trucktime) {
+    public FivVariableModel(int image, String truckname, String truckid,String charge, String truckdate, String trucktime) {
         this.image = image;
         this.truckname = truckname;
         this.truckid = truckid;
+        this.charge = charge;
         this.truckdate = truckdate;
         this.trucktime = trucktime;
 

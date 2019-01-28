@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import technology.infobite.com.yloproject.R;
 
@@ -19,6 +20,8 @@ public class AboutUsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private TextView textView1,textView2,textView3,visibletv1,visibletv2,visibletv3;
+    private boolean check=false;
 
     private OnFragmentInteractionListener mListener;
 
@@ -47,6 +50,59 @@ public class AboutUsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
        View view  =  inflater.inflate(R.layout.fragment_about_us, container, false);
+       textView1 = view.findViewById(R.id.onclicklayout1);
+       textView2 = view.findViewById(R.id.onclicklayout2);
+       textView3 = view.findViewById(R.id.onclicklayout3);
+       visibletv1= view.findViewById(R.id.visible1_tv1);
+       visibletv2 = view.findViewById(R.id.visible1_tv2);
+       visibletv3 = view.findViewById(R.id.visible1_tv3);
+
+        textView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (check){
+                    check = false;
+                    visibletv1.setVisibility(View.GONE);
+                    textView1.setCompoundDrawablesWithIntrinsicBounds( 0, 0, R.drawable.ic_expand_more_black,0);
+
+                }else {
+                    check = true;
+                    visibletv1.setVisibility(View.VISIBLE);
+                    textView1.setCompoundDrawablesWithIntrinsicBounds( 0, 0, R.drawable.ic_expand_less_black,0);
+                }
+            }
+        });
+        textView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (check){
+                    check = false;
+                    visibletv2.setVisibility(View.GONE);
+                    textView2.setCompoundDrawablesWithIntrinsicBounds( 0, 0, R.drawable.ic_expand_more_black,0);
+
+                }else {
+                    check = true;
+                    visibletv2.setVisibility(View.VISIBLE);
+                    textView2.setCompoundDrawablesWithIntrinsicBounds( 0, 0, R.drawable.ic_expand_less_black,0);
+                }
+            }
+        });
+        textView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (check){
+                    check = false;
+                    visibletv3.setVisibility(View.GONE);
+                    textView3.setCompoundDrawablesWithIntrinsicBounds( 0, 0, R.drawable.ic_expand_more_black,0);
+
+                }else {
+                    check = true;
+                    visibletv3.setVisibility(View.VISIBLE);
+                    textView3.setCompoundDrawablesWithIntrinsicBounds( 0, 0, R.drawable.ic_expand_less_black,0);
+                }
+            }
+        });
+
         return view;
     }
 

@@ -14,8 +14,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
-import android.widget.ImageView;
+import android.view.View;
 import android.widget.TextView;
 
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
@@ -42,22 +41,21 @@ import technology.infobite.com.yloproject.utilities.Utility;
 
 public class SlidingNavigation extends AppCompatActivity implements DrawerAdapter.OnItemSelectedListener,
         HomeFragment.OnFragmentInteractionListener,
-        MyTrips.OnFragmentInteractionListener,YloCashFragment.OnFragmentInteractionListener
-        ,YloRatesFragment.OnFragmentInteractionListener,SettingFragment.OnFragmentInteractionListener ,AboutUsFragment.OnFragmentInteractionListener
-        ,SupportFragment.OnFragmentInteractionListener,ReferandEarnFragment.OnFragmentInteractionListener{
+        MyTrips.OnFragmentInteractionListener, YloCashFragment.OnFragmentInteractionListener
+        , YloRatesFragment.OnFragmentInteractionListener, SettingFragment.OnFragmentInteractionListener, AboutUsFragment.OnFragmentInteractionListener
+        , SupportFragment.OnFragmentInteractionListener, ReferandEarnFragment.OnFragmentInteractionListener, CouponFragment.OnFragmentInteractionListener {
 
     private SlidingRootNav slidingRootNav;
     private static final int NAVall = 0;
-    private static final int NAVbooktrip = 1;
-    private static final int NAVmytirp = 2;
-    private static final int NAVylocash = 3;
-    private static final int NAVylorates = 4;
-    private static final int NAVreferandearn = 5;
-    private static final int NAVcoupon = 6;
-    private static final int NAVaboutus = 7;
-    private static final int NAVsupport = 8;
-    private static final int NAVsetting = 9;
-    private static final int EXIT = 10;
+    private static final int NAVmytirp = 1;
+    private static final int NAVylocash = 2;
+    private static final int NAVylorates = 3;
+    private static final int NAVreferandearn = 4;
+    private static final int NAVcoupon = 5;
+    private static final int NAVaboutus = 6;
+    private static final int NAVsupport = 7;
+    private static final int NAVsetting = 8;
+    private static final int EXIT = 9;
 
     private HomeFragment.OnFragmentInteractionListener listener1;
     private MyTrips.OnFragmentInteractionListener mListener;
@@ -67,7 +65,7 @@ public class SlidingNavigation extends AppCompatActivity implements DrawerAdapte
     private AboutUsFragment.OnFragmentInteractionListener mListener3;
     private AboutUsFragment.OnFragmentInteractionListener mListener4;
     private SupportFragment.OnFragmentInteractionListener mListener5;
-
+    private ReferandEarnFragment.OnFragmentInteractionListener listener2;
     private Context context;
 
     /* ={"Book a Trip","My Trips","YLO Cash","YLO Rates",
@@ -75,24 +73,24 @@ public class SlidingNavigation extends AppCompatActivity implements DrawerAdapte
 
     private String[] screenTitles;
     private Drawable[] screenIcons;
-
+    private TextView toolbartitile;
     /*= {R.drawable.trip_travel,R.drawable.my_trip
             ,R.drawable.ylo_cash,R.drawable.ylo_rates,R.drawable.refer_and_earn,
             R.drawable.coupon,R.drawable.about_us,R.drawable.support,R.drawable.setting};*/
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sliding_navigation);
-
         initXmal(savedInstanceState);
+
+
     }
 
     private void initXmal(Bundle savedInstanceState) {
         context = this;
-
+        toolbartitile = findViewById(R.id.tool_title);
         android.support.v7.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -109,7 +107,6 @@ public class SlidingNavigation extends AppCompatActivity implements DrawerAdapte
 
         DrawerAdapter drawadapter = new DrawerAdapter(Arrays.asList(
                 createItemFor(NAVall).setChecked(true),
-                createItemFor(NAVbooktrip),
                 createItemFor(NAVmytirp),
                 createItemFor(NAVylocash),
                 createItemFor(NAVylorates),
@@ -125,15 +122,15 @@ public class SlidingNavigation extends AppCompatActivity implements DrawerAdapte
         list.setNestedScrollingEnabled(false);
         list.setLayoutManager(new LinearLayoutManager(this));
         list.setAdapter(drawadapter);
-        drawadapter.setSelected(NAVbooktrip);
+        drawadapter.setSelected(NAVall);
     }
 
     private DrawerItem createItemFor(int position) {
         return new SimpleItem(screenIcons[position], screenTitles[position])
-                .withIconTint(color(R.color.white))
-                .withTextTint(color(R.color.white))
-                .withSelectedIconTint(color(R.color.textColorSecondary))
-                .withSelectedTextTint(color(R.color.textColorSecondary));
+                .withIconTint(color(R.color.black))
+                .withTextTint(color(R.color.black))
+                .withSelectedIconTint(color(R.color.white))
+                .withSelectedTextTint(color(R.color.white));
     }
 
     @ColorInt
@@ -157,6 +154,7 @@ public class SlidingNavigation extends AppCompatActivity implements DrawerAdapte
         ta.recycle();
         return icons;
     }
+
     @Override
     public void onBackPressed() {
         if (slidingRootNav.isMenuOpened()) {
@@ -165,10 +163,11 @@ public class SlidingNavigation extends AppCompatActivity implements DrawerAdapte
             FragmentManager fm = getSupportFragmentManager();
             Fragment fragment_byID = fm.findFragmentById(R.id.home_content);
             String tag = fragment_byID.getTag();
-            if (!tag.equals(ConstantData.HOME)) {
-                HomeFragment homeFragment = new HomeFragment();
-                Utility.setFragment(homeFragment, context, ConstantData.HOME);
+            if (!tag.equals(ConstantData.BOOKTRIP)) {
+                HomeFragment bfragment = new HomeFragment();
+                Utility.setFragment(bfragment, context, ConstantData.BOOKTRIP);
             } else {
+
                 finish();
             }
         }
@@ -177,47 +176,66 @@ public class SlidingNavigation extends AppCompatActivity implements DrawerAdapte
     @Override
     public void onItemSelected(int position) {
         if (position == NAVall) {
-            HomeFragment fragment = new HomeFragment();
-            Utility.setFragment(fragment, context, ConstantData.BOOKTRIP);
+            toolbartitile.setText(ConstantData.BOOKTRIP);
+            BookingFragment bfragment = new BookingFragment();
+            Utility.setFragment(bfragment, context, ConstantData.BOOKTRIP);
             slidingRootNav.closeMenu();
-        } else if (position == NAVbooktrip) {
+          /* *//* toolbartitile.setText(ConstantData.HOME);
+            HomeFragment homeFragment = new HomeFragment();
+            Utility.setFragment(homeFragment, context, ConstantData.HOME);
+            slidingRootNav.closeMenu();
+       *//* } else if (position == NAVbooktrip) {
+            toolbartitile.setText(ConstantData.BOOKTRIP);
             BookingFragment fragment = new BookingFragment();
             Utility.setFragment(fragment, context, ConstantData.BOOKTRIP);
             slidingRootNav.closeMenu();
-
+*/
         } else if (position == NAVmytirp) {
+            toolbartitile.setText(ConstantData.YLOMYTRIP);
             MyTrips fragment = new MyTrips();
             Utility.setFragment(fragment, context, ConstantData.YLOMYTRIP);
             slidingRootNav.closeMenu();
         } else if (position == NAVylocash) {
-                YloCashFragment fragment = new YloCashFragment();
-                Utility.setFragment(fragment, context, ConstantData.YLOCASH);
-                slidingRootNav.closeMenu();
-            } else if (position == NAVylorates) {
+            toolbartitile.setText(ConstantData.YLOCASH);
+            YloCashFragment fragment = new YloCashFragment();
+            Utility.setFragment(fragment, context, ConstantData.YLOCASH);
+            slidingRootNav.closeMenu();
+        } else if (position == NAVylorates) {
+            toolbartitile.setText(ConstantData.YLORATES);
             YloRatesFragment fragment = new YloRatesFragment();
             Utility.setFragment(fragment, context, ConstantData.YLORATES);
             slidingRootNav.closeMenu();
 
         } else if (position == NAVreferandearn) {
-           ReferandEarnFragment fragment = new ReferandEarnFragment();
+            toolbartitile.setText(ConstantData.REFERANDEARN);
+            ReferandEarnFragment fragment = new ReferandEarnFragment();
             Utility.setFragment(fragment, context, ConstantData.REFERANDEARN);
             slidingRootNav.closeMenu();
 
         } else if (position == NAVcoupon) {
+            toolbartitile.setText(ConstantData.COUPON);
             CouponFragment fragment = new CouponFragment();
-            Utility.setFragment(fragment,context,ConstantData.COUPON);
+            Utility.setFragment(fragment, context, ConstantData.COUPON);
             slidingRootNav.closeMenu();
-        }else if (position == NAVaboutus) {
+        } else if (position == NAVaboutus) {
+            toolbartitile.setText(ConstantData.ABOUTUS);
             AboutUsFragment fragment = new AboutUsFragment();
-            Utility.setFragment(fragment,context,ConstantData.ABOUTUS);
+            Utility.setFragment(fragment, context, ConstantData.ABOUTUS);
             slidingRootNav.closeMenu();
-        }else if (position == NAVsupport) {
+        } else if (position == NAVsupport) {
+            toolbartitile.setText(ConstantData.SUPPORT);
             SupportFragment fragment = new SupportFragment();
-            Utility.setFragment(fragment,context,ConstantData.SUPPORT);
+            Utility.setFragment(fragment, context, ConstantData.SUPPORT);
             slidingRootNav.closeMenu();
-        }else if (position == NAVsetting) {
+        } else if (position == NAVsetting) {
+            toolbartitile.setText(ConstantData.SETTING);
             SettingFragment fragment = new SettingFragment();
-            Utility.setFragment(fragment,context,ConstantData.SETTING);
+            Utility.setFragment(fragment, context, ConstantData.SETTING);
+            slidingRootNav.closeMenu();
+        } else if (position == EXIT){
+            toolbartitile.setText(ConstantData.HOME);
+            BookingFragment fragment = new BookingFragment();
+            Utility.setFragment(fragment, context, ConstantData.HOME);
             slidingRootNav.closeMenu();
         }
     }

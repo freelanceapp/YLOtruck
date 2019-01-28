@@ -5,19 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.SupportFragment">
-    <View
-        android:background="@color/transparent_a"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 <LinearLayout
-    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="20dp"
     android:layout_marginLeft="10dp"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <ImageView
-        android:padding="30dp"
+        android:padding="40dp"
         android:src="@drawable/ylo_logo"
         android:layout_width="match_parent"
         android:layout_height="130dp" />
@@ -29,8 +27,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:src="@drawable/address"
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_width="38dp"
+            android:layout_height="38dp" />
         <EditText
             android:inputType="text"
             android:layout_marginLeft="10dp"
@@ -38,7 +36,7 @@
             android:paddingLeft="20dp"
             android:textSize="16dp"
             android:background="@drawable/left_corner_etbackground"
-            android:textColorHint="@color/transparent_a"
+            android:textColorHint="@color/brown"
             android:hint="123 palasiya indore"
             android:textColor="@color/white"
             android:layout_width="match_parent"
@@ -53,8 +51,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:src="@drawable/mail_address"
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_width="38dp"
+            android:layout_height="38dp" />
         <EditText
             android:inputType="textEmailAddress"
             android:layout_marginLeft="10dp"
@@ -62,8 +60,8 @@
             android:paddingLeft="20dp"
             android:textSize="16dp"
             android:background="@drawable/left_corner_etbackground"
-            android:textColorHint="@color/transparent_a"
-            android:hint="thakurP123@gmail.com"
+            android:textColorHint="@color/brown"
+            android:hint="dev.ylotrucks@gmail.com"
             android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="50dp" />
@@ -75,8 +73,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:src="@drawable/contact"
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_width="38dp"
+            android:layout_height="38dp" />
         <EditText
             android:inputType="number"
             android:layout_marginLeft="10dp"
@@ -84,11 +82,11 @@
             android:paddingLeft="20dp"
             android:textSize="16dp"
             android:background="@drawable/left_corner_etbackground"
-            android:textColorHint="@color/transparent_a"
+            android:textColorHint="@color/brown"
             android:hint="+916546354435"
-            android:textColor="@color/transparent_a"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="50dp" />
     </LinearLayout>
-</LinearLayout></View>
+</LinearLayout>
 </FrameLayout>

@@ -13,31 +13,25 @@
 
     <LinearLayout
         android:id="@+id/layoutDots"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="50dp"
         android:gravity="center"
+        android:layout_centerHorizontal="true"
         android:orientation="horizontal"></LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:alpha=".5"
-        android:layout_above="@id/layoutDots"
-        android:background="@android:color/white" />
-
     <TextView
-        android:textSize="16dp"
-        android:layout_marginBottom="20dp"
-        android:text="skip"
+        android:textAlignment="center"
         android:id="@+id/tv_text_skip"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
         android:background="@null"
-        android:textColor="@android:color/white" />
+        android:text="skip"
+        android:textColor="@android:color/white"
+        android:textSize="16dp" />
     <Button
         android:id="@+id/button_next"
         android:background="@drawable/button_curved_yello"
@@ -49,7 +43,6 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:text="@string/next"
-        android:layout_width="130dp"
+        android:layout_width="100dp"
         android:layout_height="35dp" />
-
 </RelativeLayout>

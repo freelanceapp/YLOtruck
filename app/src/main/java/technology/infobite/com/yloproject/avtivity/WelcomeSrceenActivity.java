@@ -44,8 +44,8 @@ public class WelcomeSrceenActivity extends AppCompatActivity {
         // add few more layouts if you want
         layouts = new int[]{
                 R.layout.welcome_screen1,
-                R.layout.welcome_screen2,
                 R.layout.welcome_screen3,
+                R.layout.welcome_screen2,
               };
 
         // adding bottom dots

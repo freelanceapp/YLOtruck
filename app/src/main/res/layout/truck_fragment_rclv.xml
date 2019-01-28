@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/truck_layout"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_gravity="center"
-    android:layout_height="wrap_content">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/truck_image"
-        android:layout_gravity="center"
-        android:src="@drawable/openyellow1"
-        android:layout_width="180dp"
-        android:layout_height="130dp" />
-    <TextView
-        android:id="@+id/truck_name"
-        android:padding="5dp"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:text="Ape Piaggieo"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/truck_image"
+            android:layout_width="80dp"
+            android:adjustViewBounds="true"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/openyellow1" />
+
+        <TextView
+            android:id="@+id/truck_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Ape Piaggieo"
+            android:textAlignment="center" />
+    </LinearLayout>
 </LinearLayout>

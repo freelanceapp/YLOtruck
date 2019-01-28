@@ -4,45 +4,36 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import technology.infobite.com.yloproject.R;
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link YloRatesFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link YloRatesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import technology.infobite.com.yloproject.R;
+import technology.infobite.com.yloproject.adapter.TruckAdapter;
+import technology.infobite.com.yloproject.adapter.TruckDetailsScheduleAdapter;
+import technology.infobite.com.yloproject.modal.SixVariableModel;
+import technology.infobite.com.yloproject.modal.TwoVariableModel;
+
+
 public class YloRatesFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
     private OnFragmentInteractionListener mListener;
+    private RecyclerView yloratesrclv1,yloratesrclv2;
+    private List<TwoVariableModel> truckhorizontalList = new ArrayList<>();
+    private List<SixVariableModel> truckdetailsList = new ArrayList<>();
 
     public YloRatesFragment() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment YloRatesFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static YloRatesFragment newInstance(String param1, String param2) {
         YloRatesFragment fragment = new YloRatesFragment();
         Bundle args = new Bundle();
@@ -64,11 +55,35 @@ public class YloRatesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ylo_rates, container, false);
-    }
+      View view = inflater.inflate(R.layout.fragment_ylo_rates, container, false);
+        yloratesrclv1 = view.findViewById(R.id.ylo_rates_rclv1);
+        yloratesrclv2 = view.findViewById(R.id.ylo_rates_rclv2);
+        // Horizontal Truck list here.
+        truckhorizontalList.add(new TwoVariableModel(R.drawable.openyellow1,"Tata ace"));
+        truckhorizontalList.add(new TwoVariableModel(R.drawable.openyellow1,"Tata ace"));
+        truckhorizontalList.add(new TwoVariableModel(R.drawable.openyellow1,"Tata ace"));
+        truckhorizontalList.add(new TwoVariableModel(R.drawable.openyellow1,"Tata ace"));
+        truckhorizontalList.add(new TwoVariableModel(R.drawable.openyellow1,"Tata ace"));
+        truckhorizontalList.add(new TwoVariableModel(R.drawable.openyellow1,"Tata ace"));
+        TruckAdapter truckAdapter1 = new TruckAdapter(truckhorizontalList, getActivity());
+        LinearLayoutManager lm1 = new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
+        yloratesrclv1.setLayoutManager(lm1);
+        yloratesrclv1.setItemAnimator(new DefaultItemAnimator());
+        yloratesrclv1.setAdapter(truckAdapter1);
+        //Vertical TruckDetails list here
+        truckdetailsList.add(new SixVariableModel("ylo standart rates","Base Fare","Base Time","per hours","150.00","120.00"));
+        truckdetailsList.add(new SixVariableModel("ylo standart rates","Base Fare","Base Time","per hours","150.00","120.00"));
+        truckdetailsList.add(new SixVariableModel("ylo standart rates","Base Fare","Base Time","per hours","150.00","120.00"));
+        truckdetailsList.add(new SixVariableModel("ylo standart rates","Base Fare","Base Time","per hours","150.00","120.00"));
+        truckdetailsList.add(new SixVariableModel("ylo standart rates","Base Fare","Base Time","per hours","150.00","120.00"));
+        TruckDetailsScheduleAdapter truckDetailsSchedule = new TruckDetailsScheduleAdapter(truckdetailsList, getActivity());
+        LinearLayoutManager lm2 = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
+        yloratesrclv2.setLayoutManager(lm2);
+        yloratesrclv2.setItemAnimator(new DefaultItemAnimator());
+        yloratesrclv2.setAdapter(truckDetailsSchedule);
 
-    // TODO: Rename method, update argument and hook method into UI event
+        return view;
+    }
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -92,16 +107,6 @@ public class YloRatesFragment extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

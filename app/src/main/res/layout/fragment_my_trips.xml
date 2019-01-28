@@ -46,9 +46,10 @@
                 android:layout_height="44dp"/>
         </RelativeLayout>
         <android.support.v7.widget.RecyclerView
+            android:background="@color/trasparent_b"
             android:id="@+id/rclv_mytrips"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+            android:layout_height="match_parent"/>
 
     </LinearLayout>
 

@@ -2,7 +2,6 @@
 <resources>
 
     <string-array name="icontitles">
-        <item>Home</item>
         <item>Book a Trip</item>
         <item>My Trips</item>
         <item>YLO Cash </item>
@@ -18,16 +17,15 @@
 
     <array name="icons">
         <item>@drawable/smalltrip_travel</item>
-        <item>@drawable/smalltrip_travel</item>
         <item>@drawable/small_my_trip</item>
         <item>@drawable/small_ylo_cash</item>
         <item>@drawable/small_ylo_rates</item>
-        <item>@drawable/small_ylo_cash</item>
+        <item>@drawable/small_refer_and_earn</item>
         <item>@drawable/small_coupon</item>
         <item>@drawable/small_about_us</item>
         <item>@drawable/small_support</item>
         <item>@drawable/small_setting</item>
-        <item>@mipmap/ic_launcher</item>
+        <item>@drawable/ic_arrow_back_black</item>
 
     </array>
 

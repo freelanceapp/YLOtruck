@@ -15,9 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import technology.infobite.com.yloproject.R;
-import technology.infobite.com.yloproject.adapter.FivVariableModel;
 import technology.infobite.com.yloproject.adapter.MyTripAdapter;
 import technology.infobite.com.yloproject.adapter.TruckAdapter;
+import technology.infobite.com.yloproject.modal.FivVariableModel;
 
 
 public class MyTrips extends Fragment {
@@ -63,11 +63,11 @@ public class MyTrips extends Fragment {
         mytripsrclv = view.findViewById(R.id.rclv_mytrips);
 
         mytriparrrayList.add(new FivVariableModel(R.drawable.deliver_truck,"truck 1","6434636",
-                "12 jan 2019","12:40"));
+                "250","12 jan 2019","12:40"));
         mytriparrrayList.add(new FivVariableModel(R.drawable.deliver_truck,"truck 2","6434636",
-                "12 jan 2019","12:40"));
+                "250","12 jan 2019","12:40"));
         mytriparrrayList.add(new FivVariableModel(R.drawable.deliver_truck,"truck 3","6434636",
-                "12 jan 2019","12:40"));
+                "250","12 jan 2019","12:40"));
 
         MyTripAdapter myTripAdapter = new MyTripAdapter(mytriparrrayList, getActivity());
         LinearLayoutManager lm = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);

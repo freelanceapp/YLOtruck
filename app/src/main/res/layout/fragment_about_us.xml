@@ -4,67 +4,95 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.AboutUsFragment">
+
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-<ImageView
-    android:padding="30dp"
-    android:src="@drawable/ylo_logo"
-    android:layout_width="match_parent"
-    android:layout_height="130dp" />
-    <TextView
-        android:layout_marginBottom="10dp"
-        android:textColor="@color/yellow"
-        android:padding="5dp"
-        android:background="@color/black"
-        android:paddingLeft="10dp"
-        android:textStyle="bold"
-        android:textSize="16dp"
-        android:text="WHO WE ARE"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-        <TextView
-            android:layout_margin="5dp"
-            android:text="@string/tv_who_we_are"
+        android:orientation="vertical">
+
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/yellow"
-            android:padding="5dp"
-            android:background="@color/black"
-            android:paddingLeft="10dp"
-            android:textStyle="bold"
-            android:textSize="16dp"
-            android:text="YLO VISION"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:layout_margin="5dp"
-            android:text="@string/tv_who_we_are"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="130dp"
+            android:padding="30dp"
+            android:src="@drawable/ylo_logo" />
 
         <TextView
+            android:id="@+id/onclicklayout1"
+            android:drawableTint="@color/white"
+            android:drawableRight="@drawable/ic_expand_more_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="15dp"
+            android:text="WHO WE ARE"
+            android:textColor="@color/yellow"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/visible1_tv1"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/tv_who_we_are" />
+
+        <TextView
+            android:id="@+id/onclicklayout2"
+            android:drawableTint="@color/white"
+            android:drawableRight="@drawable/ic_expand_more_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:textColor="@color/yellow"
-            android:padding="5dp"
             android:background="@color/black"
-            android:paddingLeft="10dp"
-            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="15dp"
+            android:text="YLO VISION"
+            android:textColor="@color/yellow"
             android:textSize="16dp"
-            android:text="FAQ"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textStyle="bold" />
+
         <TextView
-            android:layout_margin="5dp"
-            android:text="@string/tv_who_we_are"
+            android:visibility="gone"
+            android:id="@+id/visible1_tv2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/tv_who_we_are" />
+
+        <TextView
+            android:id="@+id/onclicklayout3"
+            android:drawableTint="@color/white"
+            android:drawableRight="@drawable/ic_expand_more_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="15dp"
+            android:text="FAQ"
+            android:textColor="@color/yellow"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/visible1_tv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/tv_who_we_are" />
 
     </LinearLayout>
 </FrameLayout>

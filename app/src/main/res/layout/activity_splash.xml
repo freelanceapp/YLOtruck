@@ -3,16 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerVertical="true"
+    android:gravity="center"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".avtivity.SplashActivity">
     <ImageView
         android:layout_marginBottom="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:id="@+id/splash_logo"
         android:src="@drawable/ylo_logo"
         android:layout_width="match_parent"
-        android:layout_height="80dp" />
+        android:layout_height="70dp" />
     <RelativeLayout
         android:id="@+id/splash_way_images"
         android:layout_centerVertical="true"
@@ -21,6 +25,7 @@
         android:layout_height="wrap_content">
 
         <RelativeLayout
+            android:layout_marginTop="20dp"
             android:layout_centerVertical="true"
             android:id="@+id/way"
             android:adjustViewBounds="true"
@@ -31,7 +36,7 @@
                 android:adjustViewBounds="true"
                 android:id="@+id/deliver_way"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:scaleType="fitXY"
                 android:src="@drawable/splashway2" />
@@ -44,21 +49,17 @@
             android:layout_width="60dp"
             android:layout_height="170dp"
             android:src="@drawable/deliver_truck" />
-    </RelativeLayout>
 
-    <TextView
-        android:layout_marginTop="-40dp"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/black"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/splash_way_images"
-        android:layout_alignParentStart="true"
-        android:text="All Set For Trucking"
-        tools:ignore="NotSibling"
-        android:layout_alignParentLeft="true" />
+        <TextView
+            android:layout_marginTop="60dp"
+            android:layout_below="@id/delivery_truck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All Set For Trucking"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
 </RelativeLayout>

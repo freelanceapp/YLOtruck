@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ylo_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".avtivity.SplashActivity">
@@ -17,13 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".avtivity.MobileRegistration" />
-        <activity
-            android:name=".avtivity.NavigationMainActivity"
-            android:label="@string/title_activity_navigation_main"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".avtivity.WelcomeSrceenActivity" />
         <activity android:name=".avtivity.SlidingNavigation" />
-        <activity android:name=".avtivity.MyTripsActiivity"></activity>
+        <activity android:name=".avtivity.MyTripsActiivity" />
+        <activity android:name=".avtivity.YloCashActiivity"></activity>
     </application>
 
 </manifest>
