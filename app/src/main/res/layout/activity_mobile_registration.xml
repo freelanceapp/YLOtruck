@@ -6,34 +6,28 @@
     tools:context=".avtivity.MobileRegistration">
 
     <RelativeLayout
-        android:layout_marginTop="40dp"
-        android:layout_centerVertical="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp">
 
         <ImageView
-            android:layout_marginTop="20dp"
-            android:layout_centerVertical="true"
+            android:id="@+id/deliver_way"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
             android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             android:src="@drawable/splashway2" />
 
         <ImageView
-            android:layout_marginLeft="10dp"
+            android:id="@+id/delivery_truck"
             android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/deliver_way"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="8dp"
+            android:adjustViewBounds="true"
             android:src="@drawable/deliver_truck" />
-
-        <ImageView
-            android:id="@+id/login_logo"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/login_logo" />
 
     </RelativeLayout>
 
@@ -42,50 +36,59 @@
         android:layout_height="match_parent"
         android:background="@color/transparent_a" />
 
-    <RelativeLayout
-        android:layout_centerVertical="true"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/login_logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/login_logo" />
 
         <TextView
             android:id="@+id/text_mobile_ragistration"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:paddingLeft="46dp"
+            android:paddingTop="26dp"
+            android:paddingRight="46dp"
+            android:paddingBottom="26dp"
             android:text="@string/mobile_login_text"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="16dp" />
 
         <EditText
-            android:paddingLeft="15dp"
             android:id="@+id/edit_number"
-            android:layout_width="match_parent"
+            android:layout_width="240dp"
             android:layout_height="50dp"
-            android:layout_below="@+id/text_mobile_ragistration"
-            android:layout_marginLeft="70dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="70dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/button_background_transparent"
-            android:hint="4356468745"
+            android:hint="Ex - 9874561230"
             android:inputType="number"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
             android:textColor="@color/white"
             android:textColorHint="@color/transparent_white"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/submit_no"
-            android:layout_width="match_parent"
+            android:layout_width="240dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edit_number"
-            android:layout_marginLeft="70dp"
-            android:layout_marginRight="70dp"
             android:background="@drawable/button_curved_yello"
             android:text="submit"
             android:textSize="16dp"
             android:textStyle="bold" />
-    </RelativeLayout>
+    </LinearLayout>
 
 
 </RelativeLayout>
