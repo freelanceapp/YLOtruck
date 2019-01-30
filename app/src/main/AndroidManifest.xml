@@ -20,7 +20,6 @@
         <activity android:name=".avtivity.WelcomeSrceenActivity" />
         <activity android:name=".avtivity.SlidingNavigation" />
         <activity android:name=".avtivity.MyTripsActiivity" />
-        <activity android:name=".avtivity.YloCashActiivity"></activity>
     </application>
 
 </manifest>

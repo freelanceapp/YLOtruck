@@ -11,9 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import technology.infobite.com.yloproject.R;
-import technology.infobite.com.yloproject.avtivity.YloCashActiivity;
+import technology.infobite.com.yloproject.avtivity.MyTripsActiivity;
 
-public class YloCashFragment extends Fragment {
+public class YloCashFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -47,23 +47,14 @@ public class YloCashFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_ylo_cash, container, false);
-        Button makepayment = view.findViewById(R.id.make_payment);
-       /* makepayment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity().getApplicationContext(),YloCashActiivity.class);
-                startActivity(intent);
-            }
-        });*/
+        ((Button) view.findViewById(R.id.make_payment_recharge)).setOnClickListener(this);
+
         return view;
     }
-
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -85,6 +76,15 @@ public class YloCashFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.make_payment_recharge:
+                Intent intent = new Intent(getActivity().getApplicationContext(), MyTripsActiivity.class);
+                startActivity(intent);
+        }
     }
 
     public interface OnFragmentInteractionListener {

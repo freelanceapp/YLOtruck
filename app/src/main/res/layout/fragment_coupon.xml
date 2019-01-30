@@ -3,20 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.CouponFragment">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
     <LinearLayout
-        android:layout_gravity="center"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="wrap_content"
             android:background="@color/yellow"
             android:orientation="vertical">
 
@@ -30,13 +26,18 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="16dp"
                 android:text="Apply Your Coupon Here"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="14dp"
                 android:textStyle="bold" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <LinearLayout
             android:layout_margin="10dp"
             android:orientation="vertical"
@@ -50,22 +51,28 @@
                 android:text="Add Coupon Code"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="22dp"
-                android:textStyle="bold" />
-
-                <EditText
+                android:textSize="22dp"/>
+                <android.support.v7.widget.CardView
+                    app:cardElevation="3dp"
+                    android:layout_gravity="center_vertical"
+                    app:cardCornerRadius="10dp"
+                    android:padding="10dp"
                     android:layout_margin="20dp"
+                    android:background="@color/dark_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <EditText
                     android:padding="10dp"
                     android:inputType="text"
                     android:id="@+id/coupon_et"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:background="@color/transparent_white"
+                    android:background="@color/dark_white"
                     android:hint="Enter Coupon Code"
                     android:paddingLeft="10dp"
                     android:textSize="16dp" />
-
+            </android.support.v7.widget.CardView>
             <TextView
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
@@ -76,6 +83,7 @@
                 android:textSize="18dp"
                 android:textStyle="bold" />
         <LinearLayout
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:layout_gravity="center"
             android:orientation="horizontal"
@@ -121,16 +129,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-
-            <Button
-                android:textSize="12dp"
+            <android.support.v7.widget.CardView
+                app:cardElevation="3dp"
+                android:layout_gravity="center_horizontal"
+                app:cardCornerRadius="4dp"
+                android:padding="10dp"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="60dp"
                 android:layout_marginLeft="60dp"
+                android:background="@color/dark_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <Button
+                android:padding="10dp"
+                android:background="@color/dark_white"
+                android:textSize="12sp"
                 android:text="Valid until 31 Jan 2019"
                 android:layout_width="match_parent"
                 android:layout_height="40dp" />
+            </android.support.v7.widget.CardView>
             <Button
                 android:layout_gravity="center"
                 android:padding="10dp"
@@ -147,5 +165,5 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 </FrameLayout>

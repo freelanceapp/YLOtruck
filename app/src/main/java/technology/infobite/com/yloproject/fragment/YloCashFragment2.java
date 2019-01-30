@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import technology.infobite.com.yloproject.R;
 
-public class CardFragment extends Fragment {
+public class YloCashFragment2 extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -22,12 +22,12 @@ public class CardFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public CardFragment() {
+    public YloCashFragment2() {
         // Required empty public constructor
     }
 
-    public static CardFragment newInstance(String param1, String param2) {
-        CardFragment fragment = new CardFragment();
+    public static YloCashFragment2 newInstance(String param1, String param2) {
+        YloCashFragment2 fragment = new YloCashFragment2();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -47,11 +47,8 @@ public class CardFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_card, container, false);
+        return inflater.inflate(R.layout.fragment_ylo_cash_fragment2, container, false);
     }
-
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -75,7 +72,16 @@ public class CardFragment extends Fragment {
         mListener = null;
     }
 
-
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     * <p>
+     * See the Android Training lesson <a href=
+     * "http://developer.android.com/training/basics/fragments/communicating.html"
+     * >Communicating with Other Fragments</a> for more information.
+     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

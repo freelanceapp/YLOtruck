@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-
 import technology.infobite.com.yloproject.fragment.CardFragment;
 
 public class YlocashAdapter extends FragmentPagerAdapter {
