@@ -8,82 +8,29 @@
     app:layout_behavior="@string/bottom_sheet_behavior">
 
     <LinearLayout
-        android:visibility="gone"
         android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
 
         <TextView
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="INVOICE"
             android:textAlignment="center"
             android:textColor="@color/black"
+            android:textSize="18sp"
             android:textStyle="bold" />
-        <LinearLayout
-            android:weightSum="2"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-            <TextView
-                android:padding="2dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Booking ID"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:padding="2dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Distance Travelled"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:padding="2dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Time Taken"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Base Fare"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:padding="2dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Distance Fare"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:padding="2dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Tax"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-        </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,71 +38,126 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:padding="2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="05740024"
+                    android:padding="4dp"
+                    android:text="Booking ID"
                     android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:layout_gravity="right"
-                    android:gravity="right"/>
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:gravity="right"
-                    android:padding="2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Distance Travelled"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Time Taken"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Base Fare"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Distance Fare"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Tax"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:padding="4dp"
+                    android:text="05740024"
+                    android:textColor="@color/black"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:padding="4dp"
                     android:text="1 KM"
                     android:textColor="@color/black"
                     android:textStyle="normal" />
 
                 <TextView
-                    android:gravity="right"
-                    android:layout_gravity="right"
-                    android:padding="2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:padding="4dp"
                     android:text="1 Hr"
                     android:textColor="@color/black"
                     android:textStyle="normal" />
 
                 <TextView
-                    android:gravity="right"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:padding="4dp"
                     android:text="0"
                     android:textColor="@color/black"
                     android:textStyle="normal" />
 
                 <TextView
-                    android:gravity="right"
-                    android:padding="2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:padding="4dp"
                     android:text="0"
                     android:textColor="@color/black"
                     android:textStyle="normal" />
 
                 <TextView
-                    android:gravity="right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:padding="2dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:padding="4dp"
                     android:text="0"
                     android:textColor="@color/black"
                     android:textStyle="normal" />
+            </LinearLayout>
         </LinearLayout>
-        </LinearLayout>
+
         <Button
             android:id="@+id/close_bottomsheet"
-            android:text="close"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:background="@color/yellow"
             android:layout_width="match_parent"
-            android:layout_height="40dp" />
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/yellow"
+            android:text="close" />
     </LinearLayout>
 </LinearLayout>

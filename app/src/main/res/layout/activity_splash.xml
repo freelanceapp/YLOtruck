@@ -1,65 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_centerVertical="true"
-    android:gravity="center"
-    android:layout_centerInParent="true"
-    android:layout_gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".avtivity.SplashActivity">
-    <ImageView
-        android:layout_marginBottom="40dp"
-        android:layout_marginTop="80dp"
-        android:id="@+id/splash_logo"
-        android:src="@drawable/ylo_logo"
-        android:layout_width="match_parent"
-        android:layout_height="70dp" />
+    android:background="@color/white"
+    android:orientation="vertical">
+
     <RelativeLayout
-        android:id="@+id/splash_way_images"
-        android:layout_centerVertical="true"
-        android:layout_below="@+id/splash_logo"
+        android:id="@+id/way"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true">
 
-        <RelativeLayout
-            android:layout_marginTop="20dp"
-            android:layout_centerVertical="true"
-            android:id="@+id/way"
-            android:adjustViewBounds="true"
-            android:layout_width="match_parent"
-            android:layout_height="400dp">
-
-            <ImageView
-                android:adjustViewBounds="true"
-                android:id="@+id/deliver_way"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/splashway2" />
-        </RelativeLayout>
         <ImageView
-            android:paddingBottom="120dp"
+            android:id="@+id/splash_logo"
+            android:layout_width="170dp"
+            android:layout_marginTop="18dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/deliver_way"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:elevation="8dp"
+            android:src="@drawable/ylo_logo" />
+
+        <ImageView
+            android:id="@+id/deliver_way"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/splashway2" />
+
+        <ImageView
             android:id="@+id/delivery_truck"
             android:layout_width="60dp"
-            android:layout_height="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/deliver_way"
+            android:layout_marginBottom="8dp"
+            android:adjustViewBounds="true"
             android:src="@drawable/deliver_truck" />
 
         <TextView
-            android:layout_marginTop="60dp"
-            android:layout_below="@id/delivery_truck"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/deliver_way"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
             android:text="All Set For Trucking"
-            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold" />
+
     </RelativeLayout>
 
 </RelativeLayout>

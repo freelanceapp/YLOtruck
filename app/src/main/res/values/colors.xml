@@ -10,7 +10,9 @@
     <color name="yellow">#ffcd1e</color>
     <color name="transparent_black">#7b000000</color>
     <color name="brown">#FFCFCBCB</color>
-    <color name="transparent_a">#80464646</color>
+    <color name="brown_b">#DDDADA</color>
+    <color name="brown_c">#F0F0F0</color>
+    <color name="transparent_a">#A9464646</color>
     <color name="trasparent_b">#5aededed</color>
     <color name="transparent_c">#3E464646</color>
     <color name="green">#FF108500</color>

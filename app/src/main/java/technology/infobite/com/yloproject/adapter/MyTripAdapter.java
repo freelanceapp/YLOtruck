@@ -47,7 +47,6 @@ public class MyTripAdapter extends RecyclerView.Adapter<MyTripAdapter.ViewHolder
         viewHolder.mytirps_charges.setText(mytriparraylist.getCharge());
         viewHolder.mytripstruckdate.setText(mytriparraylist.getTruckdate());
         viewHolder.mytripstrucktime.setText(mytriparraylist.getTrucktime());
-
     }
 
     @Override

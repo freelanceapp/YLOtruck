@@ -28,7 +28,7 @@ public class TruckAdapter extends RecyclerView.Adapter<TruckAdapter.ViewHolder> 
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater li = LayoutInflater.from(context);
-        View view  = li.inflate(R.layout.truck_fragment_rclv,null);
+        View view = li.inflate(R.layout.truck_fragment_rclv, null);
         return new ViewHolder(view);
     }
 
@@ -37,7 +37,6 @@ public class TruckAdapter extends RecyclerView.Adapter<TruckAdapter.ViewHolder> 
         TwoVariableModel truckarraylist = truckArrayList.get(i);
         viewHolder.truck_image.setImageDrawable(context.getResources().getDrawable(truckarraylist.getImage()));
         viewHolder.truck_name.setText(truckarraylist.getName());
-
     }
 
     @Override
@@ -45,7 +44,7 @@ public class TruckAdapter extends RecyclerView.Adapter<TruckAdapter.ViewHolder> 
         return truckArrayList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         private LinearLayout truck_layout;
         private ImageView truck_image;
         private TextView truck_name;

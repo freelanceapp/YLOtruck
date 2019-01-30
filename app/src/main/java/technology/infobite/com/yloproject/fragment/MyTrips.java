@@ -62,11 +62,11 @@ public class MyTrips extends Fragment {
         View view = inflater.inflate(R.layout.fragment_my_trips, container, false);
         mytripsrclv = view.findViewById(R.id.rclv_mytrips);
 
-        mytriparrrayList.add(new FivVariableModel(R.drawable.deliver_truck,"truck 1","6434636",
+        mytriparrrayList.add(new FivVariableModel(R.drawable.openyellow1,"truck 1","6434636",
                 "250","12 jan 2019","12:40"));
-        mytriparrrayList.add(new FivVariableModel(R.drawable.deliver_truck,"truck 2","6434636",
+        mytriparrrayList.add(new FivVariableModel(R.drawable.openyellow2,"truck 2","6434636",
                 "250","12 jan 2019","12:40"));
-        mytriparrrayList.add(new FivVariableModel(R.drawable.deliver_truck,"truck 3","6434636",
+        mytriparrrayList.add(new FivVariableModel(R.drawable.openyellow3,"truck 3","6434636",
                 "250","12 jan 2019","12:40"));
 
         MyTripAdapter myTripAdapter = new MyTripAdapter(mytriparrrayList, getActivity());
