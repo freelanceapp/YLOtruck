@@ -154,10 +154,9 @@ public class SlidingNavigation extends AppCompatActivity implements DrawerAdapte
             Fragment fragment_byID = fm.findFragmentById(R.id.home_content);
             String tag = fragment_byID.getTag();
             if (!tag.equals(ConstantData.BOOKTRIP)) {
-                HomeFragment bfragment = new HomeFragment();
+                BookingFragment bfragment = new BookingFragment();
                 Utility.setFragment(bfragment, context, ConstantData.BOOKTRIP);
             } else {
-
                 finish();
             }
         }

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.SettingFragment">
+
     <LinearLayout
-        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
         <TextView
@@ -22,51 +23,62 @@
             android:textStyle="bold" />
 
         <TextView
-            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="Thanks for your Regular Use"
             android:textAlignment="center"
-            android:textSize="16dp"
-            />
+            android:textColor="@color/black"
+            android:textSize="16dp" />
 
         <TextView
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:padding="10dp"
             android:text="Loading Point"
             android:textColor="@color/black"
             android:textSize="16dp"
             android:textStyle="bold" />
+
         <android.support.v7.widget.CardView
-            app:cardCornerRadius="10dp"
-            android:layout_width="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_height="wrap_content">
-
-
-            <EditText
-                android:padding="7dp"
-                android:textSize="12dp"
-                android:drawablePadding="5dp"
-                android:drawableLeft="@drawable/pin_et"
-                android:background="@color/dark_white"
-                android:id="@+id/lodingpoint_et"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Add your Loading Point"/>
-        </android.support.v7.widget.CardView>
-        <TextView
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/pin_et" />
+
+                <EditText
+                    android:id="@+id/lodingpoint_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/white"
+                    android:hint="Add your Loading Point"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             android:padding="10dp"
             android:text="Unloading Point"
             android:textColor="@color/black"
@@ -74,24 +86,35 @@
             android:textStyle="bold" />
 
         <android.support.v7.widget.CardView
-            android:paddingBottom="20dp"
-            app:cardCornerRadius="10dp"
             android:layout_width="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="10dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="4dp">
 
-            <EditText
-                android:padding="7dp"
-                android:textSize="12dp"
-                android:drawablePadding="5dp"
-                android:drawableLeft="@drawable/small_placeholder_et"
-                android:background="@color/dark_white"
-                android:id="@+id/unlodingpoint_et"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Add your Loading Point"/>
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/small_placeholder_et" />
+
+                <EditText
+                    android:id="@+id/unlodingpoint_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/white"
+                    android:hint="Add your Loading Point"
+                    android:textSize="12dp" />
+            </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
 

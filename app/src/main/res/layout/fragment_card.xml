@@ -14,26 +14,33 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_marginTop="5dp"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Enter your payment Details"
-                android:textSize="10dp" />
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter your payment Details"
+                    android:textSize="10dp" />
+            </LinearLayout>
 
             <EditText
                 android:id="@+id/cardholder_name"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="15dp"
                 android:background="@color/dark_white"
-                android:drawablePadding="5dp"
                 android:hint="CARDHOLDER NAME"
-                android:padding="5dp"
+                android:paddingLeft="16dp"
                 android:textSize="14dp"
                 android:textStyle="bold" />
 
@@ -55,10 +62,10 @@
                 android:textStyle="bold" />
 
             <LinearLayout
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
                 <EditText
@@ -94,6 +101,7 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
+
             <Button
                 android:id="@+id/payment_mode"
                 android:layout_width="match_parent"
@@ -105,6 +113,7 @@
                 android:textSize="16dp"
                 android:textStyle="bold" />
         </LinearLayout>
+
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

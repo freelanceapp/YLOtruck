@@ -239,7 +239,7 @@
                 android:layout_weight="1"
                 android:background="@color/yellow"
                 android:gravity="center"
-                android:text="Book Later"
+                android:text="Book Now"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18dp"
